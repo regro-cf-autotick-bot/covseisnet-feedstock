@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
   sha256: 16ce178dcdb186b683b9c4ade6f18a6e364bc7d2e6cb570b709d673f5d67f880
 
 build:
@@ -17,11 +17,11 @@ build:
 requirements:
   host:
     - pip
-    - python >= 3.7
+    - python >=3.7
   run:
-    - numpy >= 1.22.0
-    - obspy >= 1.3.0
-    - python >= 3.7
+    - numpy >=1.22.0
+    - obspy >=1.3.0
+    - python >=3.7
     - scipy
 
 test:
@@ -35,9 +35,8 @@ test:
 
 about:
   home: https://covseisnet.gricad-pages.univ-grenoble-alpes.fr/covseisnet
-  license: LGPL-3.0
-  license_file: LICENSE.txt
-  summary: Covariance matrix analysis of network seismic data
+  license: LGPL-2.0-only
+  summary: "Covariance matrix analysis of network seismic data"
   description: |
     The `covseisnet` package provides tools for array signal processing, with a focus on data from seismic networks. The central analyzed mathematical construction is the array covariance matrix (sometimes called network covariance matrix). The core signal detection algorithms are based on the analysis of the eigenvalues of this matrix. Eigenvector decomposition provides a basis for a blind source separation. In addition, the covariance matrix can be used as input for classical array processing tools such as beamforming and inter-station cross-correlations. Covseisnet objects are mostly inherited from obspy (seismology-oriented python package) and `numpy`.
   doc_url: https://covseisnet.gricad-pages.univ-grenoble-alpes.fr/covseisnet
